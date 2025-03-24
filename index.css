@@ -200,6 +200,19 @@ h3 {
     transform: translateY(-2px);
 }
 
+.product button {
+    margin: 0;
+    margin-left: 8vw;
+    padding: 8px 16px;
+    width: 160px;
+    font-size: 0.9rem;
+}
+
+.second button {
+    margin: 0;
+    margin-right: 8vw;
+}
+
 @media (max-width: 768px) {
     .app {
         padding: 30px 15px;
@@ -237,6 +250,21 @@ h3 {
         width: 100%;
         max-width: 200px;
     }
+
+    .product button {
+        width: 140px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .product button {
+        margin: 10px 0;
+        margin-left: 8vw;
+    }
+
+    .second button {
+        margin-right: 8vw;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -260,6 +288,12 @@ h3 {
     .app-buttons img {
         width: 180px;
         height: 180px;
+    }
+
+    .product button {
+        width: 180px;
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }
 
@@ -317,17 +351,6 @@ h3 {
 
 .second p {
     text-align: right;
-}
-
-.product button {
-    margin: 0;
-    padding: 0.5vh 0;
-    margin-left: 8vw;
-}
-
-.second button {
-    margin: 0;
-    margin-right: 8vw;
 }
 
 .product button:disabled {
