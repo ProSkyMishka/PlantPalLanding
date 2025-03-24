@@ -58,7 +58,9 @@ header nav ul li a {
     font-size: min(2.5vw, 2.5vh);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #ffffff;
     font-size: min(3.5vw, 6vh);
     text-align: left;
@@ -96,7 +98,8 @@ h3 {
     font-size: min(3vw, 5vh);
 }
 
-.work, .descrip {
+.work,
+.descrip {
     display: flex;
     align-items: center;
 }
@@ -133,7 +136,7 @@ h3 {
     background: #8BBE81;
     border-radius: 20px;
     padding: 40px 20px;
-    margin: 40px auto;
+    /* margin: 40px auto; */
     width: 90%;
     max-width: 1200px;
     display: flex;
@@ -159,6 +162,7 @@ h3 {
 }
 
 .qr {
+    color: #ffffff;
     padding: 20px 0;
     margin-top: 20px;
     font-size: 1rem;
@@ -169,7 +173,7 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-top: 30px;
 }
 
@@ -188,7 +192,7 @@ h3 {
     padding: 12px 24px;
     width: 200px;
     color: white;
-    font-size: 1rem;
+    font-size: min(2.5vw, 2.5vh);
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
@@ -203,9 +207,6 @@ h3 {
 .product button {
     margin: 0;
     margin-left: 8vw;
-    padding: 8px 16px;
-    width: 160px;
-    font-size: 0.9rem;
 }
 
 .second button {
@@ -213,11 +214,11 @@ h3 {
     margin-right: 8vw;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .app {
-        padding: 30px 15px;
+        /* padding: 30px 15px; */
         margin: 30px auto;
-        width: 95%;
+        /* width: 95%; */
         border-radius: 15px;
     }
 
@@ -235,35 +236,29 @@ h3 {
         font-size: 0.9rem;
     }
 
-    .app-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
     .app-buttons img {
         width: 80px;
         height: 80px;
     }
 
-    .app-buttons button, .product button {
+    .app-buttons button {
         width: 100%;
         max-width: 200px;
     }
 
     .product button {
         width: 20vw;
-        padding: 6px 12px;
-        font-size: min(2vw, 3vh);
-    }
-
-    .product button {
-        margin: 10px 0;
+        padding: 0.5vh 0;
+        font-size: min(2vw, 4vh);
         margin-left: 8vw;
     }
 
     .second button {
         margin-right: 8vw;
+    }
+
+    .products .product {
+        width: 90%;
     }
 }
 
@@ -292,20 +287,14 @@ h3 {
 
     .product button {
         width: 20vw;
-        padding: 10px 20px;
-        font-size: min(2vw, 3vh);
+        padding: 0.5vh 0;
+        font-size: min(2vw, 4vh);
     }
 }
 
-.products h2 {
-    color: #8BBE81;
-    margin-top: 10vh;
-}
-
 .products .product {
-    width: 75%;
+    width: 77%;
     height: auto;
-    aspect-ratio: 2215 / 696;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -315,9 +304,13 @@ h3 {
     text-align: left;
 }
 
+.products h2 {
+    color: #8BBE81;
+    margin-top: 10vh;
+}
+
 .products .second {
     text-align: right;
-    aspect-ratio: 2270 / 696;
     background-image: url(images/productLeftFon.png);
     margin: 5vw 0 5vw auto;
 }
@@ -345,12 +338,23 @@ h3 {
 
 .product p {
     color: #ffffff;
-    font-size: min(2vw, 3vh);
+    font-size: min(2.2vw, 2.5vh);
     text-align: left;
 }
 
 .second p {
     text-align: right;
+}
+
+.product button {
+    margin: 0;
+    padding: 0.5vh 0;
+    margin-left: 8vw;
+}
+
+.second button {
+    margin: 0;
+    margin-right: 8vw;
 }
 
 .product button:disabled {
@@ -366,4 +370,14 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    .products .product {
+        width: 82%;
+    }
+
+    .products .second {
+        width: 83%;
+    }
 }
