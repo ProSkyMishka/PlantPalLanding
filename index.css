@@ -131,54 +131,136 @@ h3 {
 
 .app {
     background: #8BBE81;
-    border-radius: 7.5%;
-    padding: 5vh 0;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .app img {
-    margin: 5vh 0;
-    width: 7vw;
+    margin: 20px 0;
+    width: 80px;
+    height: 80px;
     border-radius: 20%;
+    object-fit: cover;
 }
 
-.app p, .qr {
+.app p {
     color: #ffffff;
-    font-size: min(2vw, 4vh);
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
 .qr {
-    padding: 5vh 0;
-    margin-top: 5vh;
-    font-size: min(1.5vw, 3vh);
-}
-
-.app-buttons img {
-    border-radius: 0%;
-    padding: 0 4vw;
-    width: 10vw;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .app-buttons {
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.app-buttons img {
+    width: 160px;
+    height: 160px;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 50px;
+    object-fit: contain;
 }
 
 .app-buttons button, .product button {
-    margin-top: 3vw;
     background: #88b04b;
     border: none;
-    padding: 1vh 0;
-    width: 15vw;
+    padding: 12px 24px;
+    width: 200px;
     color: white;
-    font-size: min(1.5vw, 3vh);
-    border-radius: calc((min(1.5vw, 3vh) + 1vh) / 2);
+    font-size: 1rem;
+    border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 20px;
 }
 
 .app-buttons button:hover, .able:hover {
     background: #6a8e3b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .app {
+        padding: 30px 15px;
+        margin: 30px auto;
+        width: 95%;
+        border-radius: 15px;
+    }
+
+    .app img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .app p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .qr {
+        font-size: 0.9rem;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .app-buttons img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .app-buttons button, .product button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .app {
+        padding: 50px 30px;
+    }
+
+    .app img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app p {
+        font-size: 1.4rem;
+    }
+
+    .qr {
+        font-size: 1.1rem;
+    }
+
+    .app-buttons img {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .products h2 {
@@ -262,13 +344,3 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-/* @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-} */
